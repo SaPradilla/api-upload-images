@@ -1,12 +1,12 @@
 {
-  "name": "api-proyect",
+  "name": "api-images",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "node  --env-file=.env --watch app.js",
-    "start":"node --env-file=.env app.js ",
+    "start": "node --env-file=.env app.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,11 +16,7 @@
     "cloudinary": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "mongoose": "^8.4.0",
     "multer": "^1.4.5-lts.1",
-    "sharp": "^0.33.4"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0"
+    "p-limit": "^6.1.0"
   }
 }

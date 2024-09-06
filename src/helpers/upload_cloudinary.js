@@ -6,7 +6,7 @@ export const uploadCloudinary = async(image)=>{
     return new Promise((resolve,reject)=>{
 
         cloudinary.uploader.upload_stream(
-            { resource_type: 'auto', folder: 'proyects-images' },
+            { resource_type: 'auto', folder: 'images-globermarket' },
             (error, result) => {
                 if (error) {
                     reject(new Error('Error al subir la imagen a Cloudinary'));

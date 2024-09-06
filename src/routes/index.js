@@ -1,15 +1,11 @@
 import { Router } from "express";
-import {CreateProyect,GetProyects,DeleteProyect } from '../controllers/Proyect.js'
-import { upload } from "../middleware/multer.js";
+import { upload } from "../middleware/multer.middleware.js";
+import { SendImage } from "../controllers/Image.controller.js";
+import { guard } from "../middleware/guard.middleware.js";
 
-// instanciamiento del router
 const router = Router();
 
-// rutas
 router
-    .post('/proyect',upload,CreateProyect)
-    .get('/proyects',GetProyects)
-    .delete('/proyect/:id',DeleteProyect)
-
+    .post('/upload/image',guard,upload,SendImage)
 
 export default router;
