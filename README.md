@@ -4,7 +4,7 @@
 #### Save Image
 
 ```http
-  POST /api/image
+  POST /upload/image
 ```
 
 | Headers | Type     | Description                |
