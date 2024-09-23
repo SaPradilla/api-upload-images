@@ -1,4 +1,4 @@
-import { uploadImages } from "../services/uploadImage.service.js";
+import { uploadImages,deleteImages } from "../services/uploadImage.service.js";
 
 
 export const SendImage  = async(req,res)=>{
@@ -19,4 +19,22 @@ export const SendImage  = async(req,res)=>{
 
 }
 
+
+export const DeleteImage = async(req,res)=>{
+
+    const {images} = req.body;
+    try {
+
+        await deleteImages(images);
+
+        return res.status(200).json({
+            msg:'Imagenes borradas correctamente c:'
+        })
+        
+    } catch (error) {
+        return res.status(500).json({msg:'Error al borrar las imagenes',error:error.message})
+
+    }
+
+}
 

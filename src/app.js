@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server running on port ${process.env.PORT}!`);
+    console.log(`Server running on port http://localhost:${process.env.PORT}`);
 });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
